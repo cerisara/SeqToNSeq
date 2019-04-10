@@ -16,11 +16,14 @@ You also need the following libraries:
 - Argparse
 - Json
 
-Ensure there exist a "data" folder inside the project folder. This folder should contain at least 2 files:
+You need to download the Gigaword data from https://github.com/harvardnlp/sent-summary
+
+Once downloaded, create the data folder, gunzip and rename sumdata/train/train.article.txt.gz into data/train.src
+and sumdata/train/train.title.txt.gz into data/train.trg
+
+The data folder should thus contain at least 2 files:
 - train.src: the input sentences for training
 - train.trg: the gold summaries for these sentences
-
-Gigaword data for sentence summarization task can be found at https://github.com/harvardnlp/sent-summary
 
 When you run the script for the first time, two additional json files are created.
 They contain the words vocabulary, and you need to delete them manually if you change the training set.
